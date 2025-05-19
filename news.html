@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="logo-name">Каталог книжок та ігор</h1>
+
+    <nav class="nav">
+      <div class="icon-links">
+        <a href="index.html" class="a-nav">Головна</a>
+        <a href="news.html" title="Новини" class="icon-link">
+          <img src="icons/newspaper-folded.png" alt="Новини">
+        </a>
+        <a href="#" id="openCartBtn" title="Кошик" class="icon-link">
+          <img src="icons/shopping-cart.png" alt="Кошик">
+        </a>
+        <a href="graphics.html" class="a-nav">Графіки</a>
+      </div>
+    </nav>
+
+    <div id="filter-panel">
+      <select id="categoryFilter">
+        <option value="all">Усі</option>
+        <option value="books">Книги</option>
+        <option value="games">Ігри</option>
+      </select>
+      <div class="filters">
+        <label>Ціна від: <input type="number" id="minPrice" placeholder="0"></label>
+        <label>до: <input type="number" id="maxPrice" placeholder="1000"></label>
+        <button id="priceFilterBtn">Фільтрувати</button>
+      </div>
+
+
+  </header>
+  <main>
+    <div class="news-container">
+      <aside class="news-sidebar" id="newsList"></aside>
+      <main class="news-detail" id="newsContent">
+        <p>Оберіть новину зі списку.</p>
+      </main>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Футер</h3>
+        <p>Текст футера</p>
+      </div>
+    </div>
+
+    <div id="cartModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeCartBtn" class="close">&times;</span>
+        <h2>Ваш кошик</h2>
+        <div id="cartItemsContainer"></div>
+        <p id="cartTotal">Загальна сума: 0 грн</p>
+        <button id="clearCartBtn">Очистити кошик</button>
+        <button id="continueShoppingBtn">Продовжити покупки</button>
+      </div>
+    </div>
+
+  </footer>
+
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeCartBtn" class="close">&times;</span>
+      <h2>Ваш кошик</h2>
+      <div id="cartItemsContainer"></div>
+      <p id="cartTotal">Загальна сума: 0 грн</p>
+      <button id="clearCartBtn">Очистити кошик</button>
+      <button id="continueShoppingBtn">Продовжити покупки</button>
+    </div>
+  </div>
+  <script src="news.js"></script>
+  <script src="cart-modal.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>
